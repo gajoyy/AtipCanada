@@ -48,10 +48,6 @@ nav {
     gap: 100px;
 }
 
-.menu-hamburguer {
-    display: none;
-}
-
 .nav__link {
     color: var(--azul-escuro);
     text-decoration: none;
@@ -63,6 +59,10 @@ nav {
 
 .nav__link:hover {
     border-bottom: 1px solid var(--azul-escuro);
+}
+
+.menu-hamburguer {
+    display: none;
 }
 
 .form__container {
@@ -177,7 +177,7 @@ nav {
     margin-top: 200px;
     background-color: var(--azul);
     width: 100%;
-    height: 450px;
+    height: 455px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -244,7 +244,7 @@ nav {
 @media screen and (max-width: 767px) {
 
     .logo a {
-       font-size: 20px;
+        font-size: 20px;
     }
 
     nav {
@@ -257,7 +257,7 @@ nav {
 
     .form__container {
         width: 100%;
-        height: 1600px;
+        height: 1300px;
         padding: 0px;
         border-radius: 0px;
     }
@@ -269,6 +269,7 @@ nav {
     .form-box {
         flex-direction: column;
         gap: 0;
+        margin-top: 20px;
     }
 
     .input__container {
@@ -279,10 +280,17 @@ nav {
         width: 350px;
     }
 
+    #produtos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .produtos__container {
         width: 250px;
     }
- 
+
     .quem-somos h1 {
         font-size: 45px;
     }
@@ -291,7 +299,7 @@ nav {
         font-size: 18px;
         max-width: 350px;
     }
-    
+
     .contato h1 {
         font-size: 45px;
     }
