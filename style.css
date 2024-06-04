@@ -143,6 +143,10 @@ nav {
     font-weight: 600;
     border-radius: 6px;
     font-size: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .enviar__btn:hover {

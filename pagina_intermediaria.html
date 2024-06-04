@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Intermediária</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Aguarde para efetuar a compra</h1>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const produtos = urlParams.get('produtos').split(',');
+
+            var stripe = Stripe("pk_test_51PO4qCRsQ8O8Oe05Ekfb7Lr3X6sPPcwOnSJ46xrPPHtqm0p9Kl07fMGuplXidUHggq3w3mJbgGZe7fR2KSk566m600ttsr8Xe0"); // Substitua pela sua chave pública do Stripe
+            stripe.redirectToCheckout({
+                lineItems: produtos.map(function (product) {
+                    return { price: product, quantity: 1 };
+                }),
+                mode: "payment",
+                successUrl: "https://atipcanada.com/alert.html",
+                cancelUrl: "https://atipcanada.com/"
+            }).then(function (result) {
+                if (result.error) {
+                    alert(result.error.message);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
