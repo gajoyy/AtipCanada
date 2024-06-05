@@ -102,19 +102,20 @@
                         <label>PRODUTOS</label>
                         <div class="produtos__container">
                             <div class="produtos__input">
-                                <input type="checkbox" name="produtos[]" value="price_1PO5SFRsQ8O8Oe05DdUHgU2R"
+                                <!-- alterar value para o valor do produto verdadeiro -->
+                                <input type="radio" name="produtos[]" value="price_1PO5SFRsQ8O8Oe05DdUHgU2R"
                                     style="width: 25px;">
                                 <label for="">Premium Mid</label>
                             </div>
-
                             <div class="produtos__input">
-                                <input type="checkbox" name="produtos[]" value="price_1PO4zHRsQ8O8Oe051kY6jEJo"
+                                <!-- alterar value para o valor do produto verdadeiro -->
+                                <input type="radio" name="produtos[]" value="price_1PO4zHRsQ8O8Oe051kY6jEJo"
                                     style="width: 25px;">
                                 <label for="">Premium Plan</label>
                             </div>
-
                             <div class="produtos__input">
-                                <input type="checkbox" name="produtos[]" value="price_1PO5UWRsQ8O8Oe05tAO8TJ62"
+                                <!-- alterar value para o valor do produto verdadeiro -->
+                                <input type="radio" name="produtos[]" value="price_1PO5UWRsQ8O8Oe05tAO8TJ62"
                                     style="width: 25px;">
                                 <label for="">Premium Global</label>
                             </div>
@@ -172,6 +173,7 @@
             } else {
                 document.getElementById('payment_success').value = 'true';
                 localStorage.removeItem('payment_success');
+                alert('O formulário foi enviado com sucesso!');
             }
         })
     </script>
