@@ -50,3 +50,14 @@ function updateDropzoneText(dropzoneText, files) {
         dropzoneText.textContent = 'Arraste e solte os arquivos aqui ou clique para selecionar';
     }
 }
+
+const menuButton = document.getElementById("menu-hamburguer");
+const menu = document.getElementById("menu");
+
+menuButton.addEventListener("click", function() {
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+});

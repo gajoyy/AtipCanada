@@ -8,11 +8,21 @@
 </head>
 
 <body>
-    <h2 style="text-align: center; color: green;">Compra realizada com sucesso! Por favor, finalize o envio do formulário.</h2>
+    <h2 style="text-align: center; color: green;">Compra realizada com sucesso! Por favor, finalize o envio do
+        formulário.</h2>
     <script>
-        setTimeout(function () {
-            window.close();
-        }, 3000);
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const sessionId = urlParams.get('session_id');
+
+            if (sessionId) {
+                localStorage.setItem('payment_success', 'true');
+            }
+
+            setTimeout(function () {
+                window.close();
+            }, 3000);
+        })
     </script>
 </body>
 

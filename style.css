@@ -65,6 +65,10 @@ nav {
     display: none;
 }
 
+#menu {
+    display: none;
+}
+
 .form__container {
     background-color: var(--cinza-claro);
     width: 80%;
@@ -257,6 +261,25 @@ nav {
 
     .menu-hamburguer {
         display: flex;
+    }
+
+    #menu {
+        position: absolute;
+        left: 72%;
+        top: 10%;
+        width: 200px;
+        height: 120px;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: var(--branco);
+        color: var(--fonte-primaria);
+    }
+
+    #menu ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
     }
 
     .form__container {

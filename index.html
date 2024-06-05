@@ -21,13 +21,20 @@
             <a href="#quem-somos" class="nav__link">Quem Somos</a>
             <a href="#contato" class="nav__link">Contato</a>
         </nav>
-        <div class="menu-hamburguer">
+        <div class="menu-hamburguer" id="menu-hamburguer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                 class="size-10 text-sky-950">
                 <path fill-rule="evenodd"
                     d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
                     clip-rule="evenodd" />
             </svg>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+            </ul>
         </div>
     </header>
 
@@ -119,6 +126,7 @@
                     </div>
                 </div>
             </div>
+            <input type="hidden" name="payment_success" id="payment_success" value="false">
             <div style="display: flex; justify-content: center; margin-top: 50px;">
                 <button type="submit" class="enviar__btn" target="_blank">ENVIAR FORMULÁRIO</button>
             </div>
@@ -135,7 +143,7 @@
 
     <section class="contato" id="contato">
         <h1>Contato</h1>
-        <a href="#">info@atipcanada.com</a>
+        <a>info@atipcanada.com</a>
     </section>
 
     <script>
@@ -156,6 +164,15 @@
                 alert('Por favor, selecione pelo menos um produto.');
             }
         });
+
+        document.querySelector('form').addEventListener('submit', function (event) {
+            if (localStorage.getItem('payment_success') !== 'true') {
+                event.preventDefault();
+                alert('Por favor, efetue o pagamento antes de enviar o formulário.');
+            } else {
+                document.getElementById('payment_success').value = 'true';
+            }
+        })
     </script>
 </body>
 
