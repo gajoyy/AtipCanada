@@ -243,6 +243,13 @@ nav {
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    #menu {
+        margin-top: 30px;
+    }
+}
+
 @media screen and (max-width: 1369px) {
     .form-box {
         gap: 0;
@@ -267,12 +274,13 @@ nav {
         position: absolute;
         left: 72%;
         top: 10%;
-        width: 200px;
-        height: 120px;
+        width: 28%;
+        height: 140px;
         border-radius: 5px;
-        padding: 20px;
+        padding: 10px;
+        padding-top: 20px;
         background-color: var(--branco);
-        color: var(--fonte-primaria);
+        margin-top: 10px;
     }
 
     #menu ul {
@@ -280,6 +288,11 @@ nav {
         flex-direction: column;
         justify-content: center;
         gap: 10px;
+    }
+
+    #menu a {
+        color: var(--fonte-primaria);
+        font-size: 14px;
     }
 
     .form__container {
