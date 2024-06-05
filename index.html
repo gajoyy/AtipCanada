@@ -171,6 +171,7 @@
                 alert('Por favor, efetue o pagamento antes de enviar o formulário.');
             } else {
                 document.getElementById('payment_success').value = 'true';
+                localStorage.removeItem('payment_success');
             }
         })
     </script>
