@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATIP Canadá</title>
+    <title>ATIP Canada</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,12 +14,12 @@
 <body>
     <header id="home">
         <div class="logo">
-            <a href="#home">ATIP CANADÁ</a>
+            <a href="#home">ATIP Canada</a>
         </div>
         <nav>
             <a href="#formulario" class="nav__link">ATIP</a>
-            <a href="#quem-somos" class="nav__link">Quem Somos</a>
-            <a href="#contato" class="nav__link">Contato</a>
+            <a href="#quem-somos" class="nav__link">How it works?</a>
+            <a href="#contato" class="nav__link">Contact</a>
         </nav>
         <div class="menu-hamburguer" id="menu-hamburguer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -32,41 +32,41 @@
         <div id="menu">
             <ul>
                 <li><a href="#formulario">ATIP</a></li>
-                <li><a href="#quem-somos">Quem Somos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#quem-somos">How it works?</a></li>
+                <li><a href="#contato">Contact</a></li>
             </ul>
         </div>
     </header>
 
 
     <main class="form__container" id="formulario">
-        <h1 class="form__title">Formulário</h1>
+        <h1 class="form__title">FORM</h1>
 
         <form action="mail.php" method="POST" enctype="multipart/form-data">
             <div class="form-box">
                 <div class="left-side">
                     <div class="input__container">
-                        <label for="nome">NOME</label>
-                        <input type="text" name="name" placeholder="Digite seu nome" required>
+                        <label for="nome">NAME</label>
+                        <input type="text" name="name" placeholder="Enter your first name" required>
                     </div>
 
                     <div class="input__container">
-                        <label for="sobrenome">SOBRENOME</label>
-                        <input type="text" name="sobrenome" placeholder="Digite seu sobrenome" required>
+                        <label for="sobrenome">LAST NAME</label>
+                        <input type="text" name="sobrenome" placeholder="Enter your last name" required>
                     </div>
 
                     <div class="input__container">
                         <label for="email">E-MAIL</label>
-                        <input type="email" name="email" placeholder="Digite seu e-mail" required>
+                        <input type="email" name="email" placeholder="Enter your email" required>
                     </div>
 
                     <div class="input__container">
-                        <label for="fone">TELEFONE</label>
+                        <label for="fone">TELEPHONE</label>
                         <input type="tel" name="fone" placeholder="(11) 99999-9999" required>
                     </div>
 
                     <div class="input__container">
-                        <label for="passport_file">PASSAPORTE</label>
+                        <label for="passport_file">PASSPORT</label>
                         <div class="dropzone" id="passport-dropzone">
                             <div style="display: flex; justify-content: center; margin-bottom: 15px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -75,7 +75,7 @@
                                         d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
                                 </svg>
                             </div>
-                            <div class="dropzone-text">Arraste e solte os arquivos aqui ou clique para selecionar</div>
+                            <div class="dropzone-text">Drag and drop files here or click to select</div>
                         </div>
                         <input type="file" id="passport_file" name="passport_file[]" multiple hidden>
                     </div>
@@ -84,7 +84,7 @@
 
                 <div class="right-side">
                     <div class="input__container">
-                        <label for="visa_file">VISTO NEGADO</label>
+                        <label for="visa_file">VISA REFUSAL</label>
                         <div class="dropzone" id="visa-dropzone">
                             <div style="display: flex; justify-content: center; margin-bottom: 15px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -93,35 +93,37 @@
                                         d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
                                 </svg>
                             </div>
-                            <div class="dropzone-text">Arraste e solte os arquivos aqui ou clique para selecionar</div>
+                            <div class="dropzone-text">Drag and drop files here or click to select</div>
                         </div>
                         <input type="file" id="visa_file" name="visa_file[]" multiple hidden>
                     </div>
 
                     <div class="input__container" id="produtos">
-                        <label>PRODUTOS</label>
+                        <label>PRODUCTS</label>
                         <div class="produtos__container">
                             <div class="produtos__input">
                                 <!-- alterar value para o valor do produto verdadeiro -->
-                                <input type="radio" name="produtos[]" value="price_1PO5SFRsQ8O8Oe05DdUHgU2R"
-                                    style="width: 25px;">
-                                <label for="">Premium Mid</label>
+                                <input type="radio" name="produtos[]" value="price_1POPXVHnBNzAuFkleJvOqOgT"
+                                    style="max-width: 14px;">
+                                <label for="">ATIP BASIC: CAD $100 (reasons for refusal including officer's
+                                    notes)</label>
                             </div>
                             <div class="produtos__input">
                                 <!-- alterar value para o valor do produto verdadeiro -->
-                                <input type="radio" name="produtos[]" value="price_1PO4zHRsQ8O8Oe051kY6jEJo"
-                                    style="width: 25px;">
-                                <label for="">Premium Plan</label>
+                                <input type="radio" name="produtos[]" value="price_1POPWvHnBNzAuFklLnCCGXri"
+                                    style="max-width: 14px;">
+                                <label for="">ATIP DOCS: CAD $100 (full application documents, including correspondences
+                                    sent to and/or from IRCC)</label>
                             </div>
                             <div class="produtos__input">
                                 <!-- alterar value para o valor do produto verdadeiro -->
-                                <input type="radio" name="produtos[]" value="price_1PO5UWRsQ8O8Oe05tAO8TJ62"
-                                    style="width: 25px;">
-                                <label for="">Premium Global</label>
+                                <input type="radio" name="produtos[]" value="price_1POPYlHnBNzAuFklzYnd5vAk"
+                                    style="max-width: 14px;">
+                                <label for="">ATIP COMBO: CAD $150 (basic + docs)</label>
                             </div>
                             <div style="display: flex; justify-content: center;">
                                 <a href="pagina_intermediaria.html" class="enviar__btn" id="checkout-link"
-                                    target="_blank">EFETUAR COMPRA</a>
+                                    target="_blank">MAKE THE PAYMENT</a>
                             </div>
                         </div>
                     </div>
@@ -129,25 +131,28 @@
             </div>
             <input type="hidden" name="payment_success" id="payment_success" value="false">
             <div style="display: flex; justify-content: center; margin-top: 50px;">
-                <button type="submit" class="enviar__btn" target="_blank">ENVIAR FORMULÁRIO</button>
+                <button type="submit" class="enviar__btn" target="_blank">SUBMIT FORM</button>
             </div>
         </form>
     </main>
 
     <section class="quem-somos" id="quem-somos">
-        <h1>Quem Somos</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum, purus at tempus ultrices, justo erat
-            laoreet augue, eu vestibulum urna massa ac lacus. Quisque ac ornare odio. Maecenas a quam sollicitudin,
-            aliquam nibh id, laoreet turpis. Duis et augue blandit, efficitur dui ac, rhoncus nisl. Sed tellus mi,
-            volutpat et turpis in, congue accumsan nisl.</p>
+        <h1>HOW IT WORKS?</h1>
+        <p>Access to Information and Privacy (ATIP) grants individuals the right to access records held by government
+            institutions, including personal information. For instance, if your Canadian visa application was refused,
+            ATIP can help you understand the reasons behind the refusal and formulate a new strategy for reapplication.
+        </p>
+        <p>Government institutions are required to respond to access to information or personal information requests
+            within 30 days. Providing a specific and detailed request can facilitate a quicker response from the
+            institution.</p>
     </section>
 
     <section class="contato" id="contato">
-        <h1>Contato</h1>
+        <h1>Contact</h1>
         <a>info@atipcanada.com</a>
     </section>
 
-    <footer style="display: flex; align-items: center; justify-content: center; margin-top: 50px; height: 45px; text-align: center;">
+    <footer style="display: flex; align-items: center; justify-content: center; height: 100px; text-align: center;">
         All rights reserved to NEW INTERCAMBIO EDUCATIONAL SERVICES INC.
     </footer>
 
@@ -166,18 +171,18 @@
                 var queryString = "?produtos=" + encodeURIComponent(productsToPass.join(','));
                 window.open("pagina_intermediaria.html" + queryString, "_blank");
             } else {
-                alert('Por favor, selecione pelo menos um produto.');
+                alert('Please select at least one product.');
             }
         });
 
         document.querySelector('form').addEventListener('submit', function (event) {
             if (localStorage.getItem('payment_success') !== 'true') {
                 event.preventDefault();
-                alert('Por favor, efetue o pagamento antes de enviar o formulário.');
+                alert('Please make the payment before submitting the form.');
             } else {
                 document.getElementById('payment_success').value = 'true';
                 localStorage.removeItem('payment_success');
-                alert('O formulário foi enviado com sucesso!');
+                alert('The form has been successfully submitted!');
             }
         })
     </script>

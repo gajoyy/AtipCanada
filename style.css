@@ -90,7 +90,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 100px;
+    /* gap: 100px; */
     margin-top: 55px;
     max-width: 100%;
 }
@@ -113,7 +113,6 @@ nav {
     color: #474747;
     font-size: 16px;
     border: none;
-    width: 545px;
     height: 50px;
     padding: 10px;
     border-radius: 4px;
@@ -239,15 +238,7 @@ nav {
     display: none;
 }
 
-@media screen and (min-width: 768px) {
-    .input__container input {
-        width: 545px;
-        height: 50px;
-    }
-}
-
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    
     #menu {
         margin-top: 30px;
     }
@@ -300,7 +291,6 @@ nav {
 
     .form__container {
         width: 100%;
-        height: 1300px;
         padding: 0px;
         border-radius: 0px;
     }
@@ -313,14 +303,6 @@ nav {
         flex-direction: column;
         gap: 0;
         margin-top: 20px;
-    }
-
-    .input__container {
-        width: 350px;
-    }
-
-    .input__container input {
-        width: 350px;
     }
 
     #produtos {

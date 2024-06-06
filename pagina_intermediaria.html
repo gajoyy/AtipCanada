@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Intermediária</title>
+    <title>Intermediate Page</title>
 </head>
 
 <body>
-    <h1 style="text-align: center;">Aguarde para efetuar a compra</h1>
+    <h1 style="text-align: center;">Please wait to make the purchase.</h1>
 
     <script src="https://js.stripe.com/v3/"></script>
     <script>
@@ -16,12 +16,12 @@
             const urlParams = new URLSearchParams(window.location.search);
             const produtos = urlParams.get('produtos').split(',');
 
-            var stripe = Stripe("pk_test_51PO4qCRsQ8O8Oe05Ekfb7Lr3X6sPPcwOnSJ46xrPPHtqm0p9Kl07fMGuplXidUHggq3w3mJbgGZe7fR2KSk566m600ttsr8Xe0"); // Substitua pela sua chave pública do Stripe
+            var stripe = Stripe("pk_live_51IaM4THnBNzAuFklyTOVrQgXlUYkjd2WrsAAtM5u4COZtvamAS1Z70XwL6ARDNwIM6tHSUlbaEI8rX5r52hOo6uq00SGkVbjsC"); // Substitua pela sua chave pública do Stripe
             stripe.redirectToCheckout({
                 lineItems: produtos.map(function (product) {
                     return { price: product, quantity: 1 };
                 }),
-                mode: "payment", 
+                mode: "payment", // payment = pagamento unico / subscription = pagamento recorrente
                 successUrl: "https://atipcanada.com/alert.html?session_id={CHECKOUT_SESSION_ID}",
                 cancelUrl: "https://atipcanada.com/"
             }).then(function (result) {
