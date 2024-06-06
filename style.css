@@ -129,12 +129,15 @@ nav {
     border-radius: 6px;
     padding: 15px;
     width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .produtos__input {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .enviar__btn {
